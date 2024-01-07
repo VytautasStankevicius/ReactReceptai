@@ -4,9 +4,9 @@ import Col from 'react-bootstrap/Col';
 
 const About = () => {
   return (
-    <Container className="presentationSection">
+    <Container>
     <Row>
-        <Col className="presentationSection__leftPart">
+        <Col>
             <h2>Bad code is bad.Sorry!</h2>
         </Col>
     </Row>

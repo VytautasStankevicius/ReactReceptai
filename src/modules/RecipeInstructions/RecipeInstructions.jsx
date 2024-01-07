@@ -29,7 +29,7 @@ export const RecipeInstructions = () => {
 
   return (
     <Container>
-      <Row className='filteredRecipe'>
+      <Row>
         <h1>Dish: {recipeData.strMeal}</h1>
         <Col md={12} lg={6} className='filteredRecipe__left'>
           <img src={recipeData.strMealThumb} alt={recipeData.strMeal} className="img-fluid"/>
@@ -39,7 +39,7 @@ export const RecipeInstructions = () => {
           <h2>Country: {recipeData.strArea}</h2>
           <h3>Ingredients</h3>
           <ul>{ingredients.map((ingredient, index) => (<li key={index}>{ingredient}</li>))}</ul>
-          <button className="watchVideoButton" onClick={'#'}>Watch video</button>
+          <button onClick={'#'}>Watch video</button>
         </Col>
       </Row>
     </Container>

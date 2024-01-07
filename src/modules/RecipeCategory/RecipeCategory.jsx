@@ -18,9 +18,9 @@ export const RecipeCategory = () => {
 
   return (
     <Container>
-      <Row className='recipeCategory'>
+      <Row>
         {category.map(categoryItem => (
-          <Col key={categoryItem.idCategory} sm={12} lg={4} className='recipeCategory__items mb-3'>
+          <Col key={categoryItem.idCategory} sm={12} lg={4} className='mb-3'>
             <Link to={`/category/${categoryItem.strCategory}`}>
               <img src={categoryItem.strCategoryThumb} alt={categoryItem.strCategory} />
               <h3>{categoryItem.strCategory}</h3>

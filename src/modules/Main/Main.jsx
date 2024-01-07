@@ -7,17 +7,17 @@ import { useNavigate } from 'react-router-dom';
 const Main = () => {
     const navigator = useNavigate()
     return (
-        <Container className="presentationSection">
+        <Container>
             <Row>
-                <Col className="presentationSection__leftPart" sm={12} xl={5}>
+                <Col sm={12} xl={6}>
                     <h2>Cooking Made Fun and Easy: Unleash Your Inner Chef</h2>
                     <p>Discover more than <span>10,000</span> recipes in your hand with the best recipe.
                         Help you to find the easiest way to cook.
                     </p>
                     <button onClick={()=>{navigator('/category')}}>Explore Recipes</button>
                 </Col>
-                <Col className="presentationSection__rightPart" sm={12} xl={7}>
-                    <Hero className="img-fluid" preserveAspectRatio="xMidYMid slice"/>
+                <Col sm={12} xl={6}>
+                    <Hero className="img-fluid"/>
                 </Col>
             </Row>
         </Container>

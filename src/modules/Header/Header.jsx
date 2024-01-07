@@ -9,20 +9,20 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="justify-content-between">
       <Container>
-        <Navbar.Brand className="logoTop">
+        <Navbar.Brand>
           <Logo />Recipedia
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarResponsive" />
-        <Navbar.Collapse id="navbarResponsive">
+        <Navbar.Toggle aria-controls="navFix" />
+        <Navbar.Collapse id="navFix">
           <Nav className="mx-auto">
-            <Nav.Link as={Link} to="/" className="linksTop">Home</Nav.Link>
-            <Nav.Link as={Link} to="category" className="linksTop">Category</Nav.Link>
-            <Nav.Link as={Link} to="recipeDisplay" className="linksTop">Recipe</Nav.Link>
-            <Nav.Link as={Link} to="about" className="linksTop">About</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="category">Category</Nav.Link>
+            <Nav.Link as={Link} to="recipeDisplay">Recipe</Nav.Link>
+            <Nav.Link as={Link} to="about">About</Nav.Link>
           </Nav>
           <Nav className="mx-auto">
-            <Nav.Link className="linksTop"><i className="fas fa-user"></i></Nav.Link>
-            <Nav.Link className='linksTop'><RecipeSearch/></Nav.Link>
+            <Nav.Link><i className="fas fa-user"></i></Nav.Link>
+            <Nav.Link><RecipeSearch/></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
