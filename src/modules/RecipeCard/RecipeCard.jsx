@@ -7,14 +7,16 @@ import statistics from '../../images/statistics.svg';
 import { randomTimer } from '../../getters/Getters';
 
 const RecipeCard = ({ recipe }) => {
+  const randomNumbers = randomTimer()
+
   return (
         <Col className="cardTemplate rounded" sm={10} lg={4}>
           <div className='cardTemplate__top'>
             <img src={recipe.strMealThumb} className="img-fluid" alt={clockGreen} />
             <div className='top__servingInfo'>
-              <p><img src={clockGreen} alt="Clock Green" />{randomTimer()} Mins</p>
-              <p><img src={userGreen} alt="User Green" /> {randomTimer()} Serving</p>
-              <p><img src={statistics} alt="Statistics" /> {randomTimer()}Easy</p>
+              <p><img src={clockGreen} alt="Clock Green" />{randomNumbers} Mins</p>
+              <p><img src={userGreen} alt="User Green" /> {randomNumbers} Serving</p>
+              <p><img src={statistics} alt="Statistics" /> {randomNumbers}Easy</p>
             </div>
           </div>
           <div className='cardTemplate__bottom'>

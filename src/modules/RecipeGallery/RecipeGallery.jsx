@@ -30,9 +30,6 @@ export const RecipeGallery = () => {
             <h3>Discover, Create, Share</h3>
             <p>Check our most popular recipes of this week</p>
           </Col>
-          <Col sm={12} lg={6} className="mainTopPart__button">
-            <a href='#'>See All</a>
-          </Col>
         </Row>
       </Container>
       <Container>
