@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import RecipeCard from '../RecipeCard/RecipeCard';
 // import { RecipeGallery } from '../../getters/Getters';
+import RecipeSearch from '../RecipeSearch/RecipeSearch';
 
 export const RecipeGallery = () => {
   const [recipeInfo, setRecipeInfo] = useState([]);
@@ -29,6 +30,9 @@ export const RecipeGallery = () => {
           <Col sm={12} lg={6}>
             <h3>Discover, Create, Share</h3>
             <p>Check our most popular recipes of this week</p>
+          </Col>
+          <Col sm={12} lg={6}>
+            <RecipeSearch></RecipeSearch>
           </Col>
         </Row>
       </Container>
