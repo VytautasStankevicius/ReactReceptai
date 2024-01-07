@@ -27,19 +27,31 @@ export const RecipeInstructions = () => {
     ingredients.push(`${ingredient} - ${measure}`);
   }
 
+  const instructions = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const instruction =  recipeData[`strInstructions${i}`];
+    if (!instruction) {
+      break}
+    instructions.push(`${instruction}`);
+  }
+
   return (
     <Container>
       <Row>
         <h1>Dish: {recipeData.strMeal}</h1>
-        <Col md={12} lg={6} className='filteredRecipe__left'>
+        <Col md={12} lg={6}>
           <img src={recipeData.strMealThumb} alt={recipeData.strMeal} className="img-fluid"/>
         </Col>
-        <Col md={12} lg={6} className='filteredRecipe__right'>
+        <Col md={12} lg={6}>
           <h2>Category: {recipeData.strCategory}</h2>
           <h2>Country: {recipeData.strArea}</h2>
           <h3>Ingredients</h3>
           <ul>{ingredients.map((ingredient, index) => (<li key={index}>{ingredient}</li>))}</ul>
           <button onClick={'#'}>Watch video</button>
+        </Col>
+        <Col md={12} lg={6}>
+          <p>{instructions.map((instruction, index) => (<span key={index}>{instruction}</span>))}</p>
         </Col>
       </Row>
     </Container>
